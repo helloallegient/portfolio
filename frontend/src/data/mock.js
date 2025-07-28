@@ -1,13 +1,14 @@
 // Mock data for AI + Full Stack Developer Portfolio
 export const portfolioData = {
   personal: {
-    name: "Alex Rodriguez",
+    name: "Amit",
     title: "AI Generalist | Full Stack Developer",
     bio: "I design intelligent systems and build scalable web apps that solve real-world problems. Blending AI with full stack development to create impactful solutions.",
     tagline: "Building the future with AI and code",
     yearsExperience: "5+",
     projectsCompleted: "50+",
-    clientsSatisfied: "30+"
+    clientsSatisfied: "30+",
+    profileImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
   },
   
   skills: {
