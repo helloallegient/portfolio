@@ -48,93 +48,110 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Main Content */}
-          <div className="mb-8">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Hi, I'm{' '}
-              <span className="text-[rgb(218,255,1)]">
-                {portfolioData.personal.name}
-              </span>
-            </h1>
-            
-            <div className="h-16 flex items-center justify-center mb-6">
-              <h2 className="text-2xl md:text-3xl text-[rgb(218,218,218)] font-semibold">
-                {currentText}
-                <span className={`ml-1 ${isTyping ? 'animate-pulse' : ''}`}>|</span>
-              </h2>
-            </div>
-
-            <p className="text-lg md:text-xl text-[rgb(161,161,170)] max-w-2xl mx-auto mb-8 leading-relaxed">
-              {portfolioData.personal.bio}
-            </p>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mb-12 max-w-md mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[rgb(218,255,1)]">
-                {portfolioData.personal.yearsExperience}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Side - Profile Image */}
+            <div className="flex justify-center lg:justify-start">
+              <div className="relative">
+                <div className="w-80 h-80 rounded-2xl overflow-hidden border-4 border-[rgb(218,255,1)] shadow-2xl">
+                  <img 
+                    src={portfolioData.personal.profileImage}
+                    alt="Amit - AI Generalist & Full Stack Developer"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {/* Glow effect */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[rgb(218,255,1)] to-[rgb(127,74,142)] opacity-20 blur-xl"></div>
               </div>
-              <div className="text-sm text-[rgb(161,161,170)]">Years Experience</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[rgb(218,255,1)]">
-                {portfolioData.personal.projectsCompleted}
-              </div>
-              <div className="text-sm text-[rgb(161,161,170)]">Projects Completed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[rgb(218,255,1)]">
-                {portfolioData.personal.clientsSatisfied}
-              </div>
-              <div className="text-sm text-[rgb(161,161,170)]">Happy Clients</div>
-            </div>
-          </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button
-              onClick={() => scrollToSection('#projects')}
-              className="bg-[rgb(218,255,1)] text-[rgb(17,17,19)] hover:bg-[rgb(166,190,21)] transition-all duration-200 text-lg px-8 py-6"
-            >
-              View My Work
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button
-              onClick={() => scrollToSection('#contact')}
-              variant="outline"
-              className="border-[rgb(218,255,1)] text-[rgb(218,255,1)] hover:bg-[rgb(218,255,1)] hover:text-[rgb(17,17,19)] transition-all duration-200 text-lg px-8 py-6"
-            >
-              <Download className="mr-2 w-5 h-5" />
-              Download Resume
-            </Button>
-          </div>
+            {/* Right Side - Content */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                Hi, I'm{' '}
+                <span className="text-[rgb(218,255,1)]">
+                  {portfolioData.personal.name}
+                </span>
+              </h1>
+              
+              <div className="h-16 flex items-center justify-center lg:justify-start mb-6">
+                <h2 className="text-xl md:text-2xl text-[rgb(218,218,218)] font-semibold">
+                  {currentText}
+                  <span className={`ml-1 ${isTyping ? 'animate-pulse' : ''}`}>|</span>
+                </h2>
+              </div>
 
-          {/* Social Links */}
-          <div className="flex justify-center space-x-6">
-            <a
-              href={portfolioData.contact.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 bg-[rgb(38,40,42)] rounded-lg flex items-center justify-center text-[rgb(161,161,170)] hover:text-[rgb(218,255,1)] hover:bg-[rgb(218,255,1)] hover:text-[rgb(17,17,19)] transition-all duration-200 transform hover:-translate-y-1"
-            >
-              <Github size={20} />
-            </a>
-            <a
-              href={portfolioData.contact.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 bg-[rgb(38,40,42)] rounded-lg flex items-center justify-center text-[rgb(161,161,170)] hover:text-[rgb(218,255,1)] hover:bg-[rgb(218,255,1)] hover:text-[rgb(17,17,19)] transition-all duration-200 transform hover:-translate-y-1"
-            >
-              <Linkedin size={20} />
-            </a>
-            <a
-              href={`mailto:${portfolioData.contact.email}`}
-              className="w-12 h-12 bg-[rgb(38,40,42)] rounded-lg flex items-center justify-center text-[rgb(161,161,170)] hover:text-[rgb(218,255,1)] hover:bg-[rgb(218,255,1)] hover:text-[rgb(17,17,19)] transition-all duration-200 transform hover:-translate-y-1"
-            >
-              <Mail size={20} />
-            </a>
+              <p className="text-lg md:text-xl text-[rgb(161,161,170)] mb-8 leading-relaxed">
+                {portfolioData.personal.bio}
+              </p>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-6 mb-8">
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl md:text-3xl font-bold text-[rgb(218,255,1)]">
+                    {portfolioData.personal.yearsExperience}
+                  </div>
+                  <div className="text-sm text-[rgb(161,161,170)]">Years Experience</div>
+                </div>
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl md:text-3xl font-bold text-[rgb(218,255,1)]">
+                    {portfolioData.personal.projectsCompleted}
+                  </div>
+                  <div className="text-sm text-[rgb(161,161,170)]">Projects Completed</div>
+                </div>
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl md:text-3xl font-bold text-[rgb(218,255,1)]">
+                    {portfolioData.personal.clientsSatisfied}
+                  </div>
+                  <div className="text-sm text-[rgb(161,161,170)]">Happy Clients</div>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                <Button
+                  onClick={() => scrollToSection('#projects')}
+                  className="bg-[rgb(218,255,1)] text-[rgb(17,17,19)] hover:bg-[rgb(166,190,21)] transition-all duration-200 text-lg px-8 py-6"
+                >
+                  View My Work
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+                <Button
+                  onClick={() => scrollToSection('#contact')}
+                  variant="outline"
+                  className="border-[rgb(218,255,1)] text-[rgb(218,255,1)] hover:bg-[rgb(218,255,1)] hover:text-[rgb(17,17,19)] transition-all duration-200 text-lg px-8 py-6"
+                >
+                  <Download className="mr-2 w-5 h-5" />
+                  Download Resume
+                </Button>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex justify-center lg:justify-start space-x-6">
+                <a
+                  href={portfolioData.contact.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-[rgb(38,40,42)] rounded-lg flex items-center justify-center text-[rgb(161,161,170)] hover:text-[rgb(218,255,1)] hover:bg-[rgb(218,255,1)] hover:text-[rgb(17,17,19)] transition-all duration-200 transform hover:-translate-y-1"
+                >
+                  <Github size={20} />
+                </a>
+                <a
+                  href={portfolioData.contact.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-[rgb(38,40,42)] rounded-lg flex items-center justify-center text-[rgb(161,161,170)] hover:text-[rgb(218,255,1)] hover:bg-[rgb(218,255,1)] hover:text-[rgb(17,17,19)] transition-all duration-200 transform hover:-translate-y-1"
+                >
+                  <Linkedin size={20} />
+                </a>
+                <a
+                  href={`mailto:${portfolioData.contact.email}`}
+                  className="w-12 h-12 bg-[rgb(38,40,42)] rounded-lg flex items-center justify-center text-[rgb(161,161,170)] hover:text-[rgb(218,255,1)] hover:bg-[rgb(218,255,1)] hover:text-[rgb(17,17,19)] transition-all duration-200 transform hover:-translate-y-1"
+                >
+                  <Mail size={20} />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
