@@ -195,7 +195,7 @@ export const portfolioData = {
       title: "The Future of AI in Web Development",
       excerpt: "Exploring how artificial intelligence is reshaping the web development landscape and what developers need to know.",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "Alex Rodriguez",
+      author: "Amit",
       date: "2024-01-15",
       readTime: "8 min read",
       category: "AI",
