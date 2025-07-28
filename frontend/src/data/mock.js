@@ -219,7 +219,7 @@ export const portfolioData = {
       title: "React Performance Optimization Tips",
       excerpt: "Essential techniques for optimizing React applications and improving user experience with better performance.",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "Alex Rodriguez",
+      author: "Amit",
       date: "2024-01-05",
       readTime: "10 min read",
       category: "Frontend",
