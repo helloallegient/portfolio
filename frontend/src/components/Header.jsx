@@ -44,7 +44,7 @@ const Header = () => {
             <div className="w-10 h-10 bg-[rgb(218,255,1)] rounded-lg flex items-center justify-center">
               <Brain className="w-6 h-6 text-[rgb(17,17,19)]" />
             </div>
-            <span className="text-xl font-bold text-white">Alex Rodriguez</span>
+            <span className="text-xl font-bold text-white">Amit</span>
           </div>
 
           {/* Desktop Navigation */}
