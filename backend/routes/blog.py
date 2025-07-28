@@ -3,8 +3,8 @@ from typing import List, Optional
 from datetime import datetime
 import logging
 
-from ..models.blog import BlogCreate, BlogResponse, BlogUpdate, BlogList, BlogCategory, create_slug
-from ..database import get_database
+from models.blog import BlogCreate, BlogResponse, BlogUpdate, BlogList, BlogCategory, create_slug
+from database import get_database
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
