@@ -3,8 +3,8 @@ from typing import List, Optional
 from datetime import datetime
 import logging
 
-from ..models.contact import ContactCreate, ContactResponse, ContactUpdate, ContactList, ContactStatus
-from ..database import get_database
+from models.contact import ContactCreate, ContactResponse, ContactUpdate, ContactList, ContactStatus
+from database import get_database
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
