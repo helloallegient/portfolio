@@ -207,7 +207,7 @@ export const portfolioData = {
       title: "Building Scalable APIs with FastAPI",
       excerpt: "A comprehensive guide to creating high-performance APIs using FastAPI and modern Python development practices.",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      author: "Alex Rodriguez",
+      author: "Amit",
       date: "2024-01-10",
       readTime: "12 min read",
       category: "Backend",
