@@ -229,10 +229,10 @@ export const portfolioData = {
   ],
   
   contact: {
-    email: "alex.rodriguez@example.com",
-    linkedin: "https://linkedin.com/in/alexrodriguez",
-    github: "https://github.com/alexrodriguez",
-    twitter: "https://twitter.com/alexrodriguez",
+    email: "amit@example.com",
+    linkedin: "https://linkedin.com/in/amit",
+    github: "https://github.com/amit",
+    twitter: "https://twitter.com/amit",
     location: "San Francisco, CA",
     phone: "+1 (555) 123-4567"
   },
