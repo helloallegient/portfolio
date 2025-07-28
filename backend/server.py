@@ -6,11 +6,11 @@ import os
 import logging
 
 # Import database functions
-from .database import connect_to_mongo, close_mongo_connection, create_indexes, seed_database
+from database import connect_to_mongo, close_mongo_connection, create_indexes, seed_database
 
 # Import route modules
-from .routes.contact import router as contact_router
-from .routes.blog import router as blog_router
+from routes.contact import router as contact_router
+from routes.blog import router as blog_router
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
