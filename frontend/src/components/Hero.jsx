@@ -41,7 +41,7 @@ const Hero = () => {
     <section id="home" className="min-h-screen bg-[rgb(17,17,19)] flex items-center justify-center relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-64 h-64 bg-[rgb(218,255,1)] rounded-full opacity-5 blur-3xl"></div>
+        <div className="absolute top-20 left-20 w-64 h-64 bg-[rgba(172, 192, 57, 1) 62, 1)] rounded-full opacity-5 blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-[rgb(127,74,142)] rounded-full opacity-5 blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-[rgb(218,255,1)] to-[rgb(127,74,142)] rounded-full opacity-3 blur-3xl"></div>
       </div>
